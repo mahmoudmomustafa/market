@@ -1,0 +1,91 @@
+category-ionic {
+
+  .toolbar-background-md {
+    background: #eb6a6a;
+  }
+
+  .bar-button-default-md,
+  .bar-button-clear-md-default,
+  .bar-button-md-default {
+    color: white !important;
+  }
+
+  h6 {
+    color: white !important;
+
+  }
+
+  ion-content {
+
+    .segment-md .segment-button.activated,
+    .segment-md .segment-button.segment-activated {
+      border-color: #ff3a3a;
+      color: black;
+      font-weight: 800;
+    }
+
+    .segment-md .segment-button {
+      color: black !important;
+      font-weight: 800 !important;
+    }
+
+    .scroll-content {
+      margin: 0 !important;
+    }
+
+    .item-md {
+      padding: 0;
+    }
+
+    .label-md {
+      margin: 0px;
+
+      img {
+        max-height: 200px;
+      }
+    }
+
+    .list-md .item-block .item-inner {
+      padding: 0;
+      border-bottom: 0;
+      border-right: 1px solid #cecece;
+    }
+
+    .card-md {
+      margin: 0px;
+      width: 100%;
+    }
+
+    .card-title {
+      font-weight: 800;
+      font-size: 1.6rem;
+      padding: 0.5rem .9rem 0;
+    }
+
+    .item-md [item-left],
+    .item-md [item-right],
+    .item-md [item-start],
+    .item-md [item-end] {
+      margin: 9px;
+    }
+
+    .item.item-md .checkbox-md {
+      margin: 0;
+    }
+
+    .checkbox-md .checkbox-icon {
+      border-radius: 50% !important;
+    }
+
+    .checkbox-md-dark .checkbox-checked {
+      border-radius: 50%;
+      border-color: #ff3a3a;
+      background-color: #ff3a3a;
+    }
+  }
+
+  .footer-btn {
+    color: white !important;
+    background-color: #ff3a3a !important;
+  }
+}

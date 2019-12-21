@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle start>
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <h6 style="color: white;font-weight: 800; margin-top: 1rem;" [innerHTML]="product.name"></h6>
+    <ion-buttons end>
+      <button ion-button icon-only color="gray">
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button icon-only color="white">
+        <ion-icon name="cart"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+  <img [src]="product.product_img" alt="page-img">
+  <div>
+    <ion-segment>
+      <ion-segment-button value="meats" checked [innerHTML]="product.name">
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <div padding>
+    <p>Product Weight : {{product.weight}}</p>
+    <p>Product Price : {{product.price}}</p>
+  </div>
+</ion-content>

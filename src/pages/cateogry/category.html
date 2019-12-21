@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle start>
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <h6 style="color: white;font-weight: 800; margin-top: 1rem;" [innerHTML]="category.name"></h6>
+    <ion-buttons end>
+      <button ion-button icon-only color="gray">
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button icon-only color="white">
+        <ion-icon name="cart"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+  <img [src]="category.category_img" alt="page-img">
+  <div>
+    <ion-segment>
+      <ion-segment-button checked [innerHTML]="category.name">
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <div>
+    <ion-list>
+      <ion-row>
+        <ion-item col-6 *ngFor="let product of category.products">
+          <button ion-item (click)="openProduct(product)">
+            <ion-card class="card">
+              <img [src]="product.product_img" />
+              <div class="card-title" [innerHTML]="product.name"></div>
+              <ion-item>
+                <div item-start>
+                  <div class="weight" [innerHTML]="product.weight"></div>
+                  <div class="price" [innerHTML]="product.price"></div>
+                </div>
+                <button ion-button icon-start clear item-end>
+                  <ion-checkbox color="dark" checked="false"></ion-checkbox>
+                </button>
+              </ion-item>
+            </ion-card>
+          </button>
+        </ion-item>
+      </ion-row>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-segment>
+    <ion-segment-button class="footer-btn">
+      Sort by
+    </ion-segment-button>
+    <ion-segment-button class="footer-btn">
+      Filter
+    </ion-segment-button>
+  </ion-segment>
+</ion-footer>
